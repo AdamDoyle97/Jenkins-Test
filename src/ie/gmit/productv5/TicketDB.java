@@ -64,7 +64,7 @@ public class TicketDB {
                 s.setSeatNumber("20A");
                 s.setTicketNumber("74CF213");
                 s.setPrice(65.00);
-                p = s; // set Product object equal to the Software object
+                //p = s; // set Product object equal to the Software object
             } else if (productCode.equalsIgnoreCase("atletico")) {
                 s.setTicketCode(productCode);
                 s.setMatch("Atletico vs Real Madrid");
@@ -75,6 +75,68 @@ public class TicketDB {
                 s.setPrice(39.90);
             }
             p = s; // set Product object equal to the Software object
+        } else if (productCode.equalsIgnoreCase("bayern")
+                    || productCode.equalsIgnoreCase("dortmund")
+                    || productCode.equalsIgnoreCase("schalke")) {
+                Bundesliga g = new Bundesliga();
+                if (productCode.equalsIgnoreCase("bayern")) {
+                    g.setTicketCode(productCode);
+                    g.setMatch("Real vs Bayern");
+                    g.setDate("May 3rd");
+                    g.setLocation("Santiago Bernabu");
+                    g.setSeatNumber("69C");
+                    g.setTicketNumber("125CB1");
+                    g.setPrice(90.00);
+                } else if (productCode.equalsIgnoreCase("dortmund")) {
+                    g.setTicketCode(productCode);
+                    g.setMatch("Dortmund vs Malaga");
+                    g.setDate("Feb 12th");
+                    g.setLocation("Barcelona Stadium");
+                    g.setSeatNumber("20A");
+                    g.setTicketNumber("74CF213");
+                    g.setPrice(65.00);
+                    p = g; // set Product object equal to the Software object
+                } else if (productCode.equalsIgnoreCase("schalke")) {
+                    g.setTicketCode(productCode);
+                    g.setMatch("Schalke vs Real Madrid");
+                    g.setDate("March 20th");
+                    g.setLocation("Atletico Stadium");
+                    g.setSeatNumber("51S");
+                    g.setTicketNumber("124F65");
+                    g.setPrice(39.90);
+                }
+            p = g; // set Product object equal to the Software object
+        } else if (productCode.equalsIgnoreCase("psg")
+                || productCode.equalsIgnoreCase("marseille")
+                || productCode.equalsIgnoreCase("lile")) {
+            Ligue1 l = new Ligue1();
+            if (productCode.equalsIgnoreCase("psg")) {
+                l.setTicketCode(productCode);
+                l.setMatch("PSG vs Bayern");
+                l.setDate("May 3rd");
+                l.setLocation("Santiago Bernabu");
+                l.setSeatNumber("69C");
+                l.setTicketNumber("125CB1");
+                l.setPrice(90.00);
+            } else if (productCode.equalsIgnoreCase("marseille")) {
+                l.setTicketCode(productCode);
+                l.setMatch("Marseille vs Malaga");
+                l.setDate("Feb 12th");
+                l.setLocation("Barcelona Stadium");
+                l.setSeatNumber("20A");
+                l.setTicketNumber("74CF213");
+                l.setPrice(65.00);
+                p = l; // set Product object equal to the Software object
+            } else if (productCode.equalsIgnoreCase("lile")) {
+                l.setTicketCode(productCode);
+                l.setMatch("Lile vs Real Madrid");
+                l.setDate("March 20th");
+                l.setLocation("Atletico Stadium");
+                l.setSeatNumber("51S");
+                l.setTicketNumber("124F65");
+                l.setPrice(39.90);
+            }
+            p = l; // set Product object equal to the Software object
         }
         return p;
     }
